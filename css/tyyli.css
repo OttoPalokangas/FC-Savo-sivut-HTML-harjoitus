@@ -1,1 +1,16 @@
-body (color: rgb(211,09,222)
+body {color: rgb(255, 255, 255);
+    font-family: 'courier new', monospace;
+    background-color: rgb(0, 0, 0);}
+    nav ul li a {color:aliceblue;}
+    a:hover {color:rgb(252, 252, 252)}
+    a::after{color:rgb(88, 89, 87)}
+
+    img {border: 25px solid rgb(255, 255, 255);
+        border-style:groove;}
+
+        div {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
