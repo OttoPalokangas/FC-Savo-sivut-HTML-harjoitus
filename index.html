@@ -1,28 +1,49 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="fi">
 <head>
-    <title>Otsikko</title>    
+    <!-- nämä kommentoidut tägit käydään läpi tulevalla oppitunnilla -->
+	<!-- <meta charset="utf-8"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<title>Default sivu</title>
 </head>
 <body>
 <header>
-    <!--header osio mihin tulee logo tai kuva-->
-    <a href="index.html">Etusivu <img src="/img/jokukuva.jpg" alt="Tässä on jokukuva" width="75" height="75" style="float: right; margin: 1px;">></a>
-    <h1>Tosijjaan</h1>
-    <p><em>Tosijjaan ei tässä mitään</em></p>
-    <header>
+    <!-- Logo on linkki etusivulle: a-elementin sisällä img. alt toimii linkkitekstinä. -->
+    <a href="index.html"><img src="img/sakky.jpg" alt="Logo" width="100" height="100"></a>
 
+    <h1>Default sivu</h1>
     
-        <nav>
-            <ul>
-                <li> <a href="index.html">Etusivu</a></li>
-                <li> <a href="tietoja.html">Lisätietoja</a></li>
-                <li> <a href="joukkuuet.html">Joukkueet</a></li>
-                <li> <a href="galleria.html">Kuvat</a></li>
-                <li> <a href="Yhteystieto.html">Yhteyttä</a></li>
-
-            </ul>
-        </nav>
-
 </header>
+
+
+<nav>
+        <ul>
+            <li><a href="index.html">Etusivu</a></li> <!-- Tämä on kommentti -->
+            <li><a href="about.html">Tietoa</a></li> <!-- Tämä on tietoa sivulle linkki-->
+            <li><a href="contact.html">Yhteystiedot</a></li> <!-- Tämä on yhteystiedot sivulle linkki -->
+        </ul>
+</nav>
+
+<!-- ============================================================
+     MAIN · tämän sivun oma sisältö, yksi per sivu
+     ============================================================ -->
+<main>
+    
+    <!-- Tähän voit lisätä omaa sisältöä  -->
+    <p>Tämä on oletussivu, jota voi hyödyntää vapaasti.</p>
+
+</main>
+
+<!-- ============================================================
+     FOOTER tulee sivun loppuun · sisältää yleensä yhteystiedot ja tekijänoikeuden, sama jokaisella sivulla
+     github-linkin voit muokata oman profiilisi mukaan   
+     ============================================================ -->
+<footer>
+    <div class="alatunniste-tiedot">
+    <p><small>&copy; 2026 Oletus Sivu · Y-tunnus 1234567-8 · <span class="paivitetty">Päivitetty <time datetime="2026-10-21">21.10.2026</time></span></small></p>
+    <p><small>Sivuston on tehnyt <a href="https://github.com/kayttajanimi" target="_blank" rel="noopener noreferrer">Matti Meikäläinen</a> Sakkyn HTML-perusteet-kurssilla.</small></p>
+  </div>
+</footer>
+
 </body>
 </html>
