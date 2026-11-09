@@ -4,84 +4,68 @@
     <!-- nämä kommentoidut tägit käydään läpi tulevalla oppitunnilla -->
 	<!-- <meta charset="utf-8"> -->
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-	<title>Kehonrakennus</title>
+	<title>FC SAVO</title>
     <link rel="stylesheet" href="css/tyyli.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <a href="index.html">ETUSIVU</a> <!-- Tämä on kommentti -->
-            <a href="kehitys.html">KEHITYS JA PALAUTUMINEN</a> <!-- Tämä on tietoa sivulle linkki-->
-            <a href="kilpailut.html">KEHONRAKENNUSKILPAILUT</a> <!-- Tämä on yhteystiedot sivulle linkki -->
-        </ul>
+   <nav class="ylapalkki">
+    <!-- Logo -->
+    <a href="index.html" class="logo-linkki">
+        <img src="img/fcsavo.png" alt="Logo">
+    </a>
+
+    <!-- Navigaation linkit -->
+    <div class="nav-linkit">
+        <a href="index.html">Etusivu</a>
+        <a href="joukkueet.html">Joukkueet</a>
+        <a href="kilpailut.html">Kilpailut</a>
+    </div>
 </nav>
 <header>
     <!-- Logo on linkki etusivulle: a-elementin sisällä img. alt toimii linkkitekstinä. -->
-    <a href="index.html"><img src="img/sakky.jpg" alt="Logo" width="100" height="100"></a>
-
-    <h1>Kehonrakennuskilpailut</h1>
+    <h1>Kilpailut</h1>
     
 </header>
+
+<p>Jalkapallon kilpailut ovat monipuolisia ja kattavat niin kansalliset kuin kansainvälisetkin turnaukset. Kansalliset liigat, kuten Englannin Premier League, Espanjan La Liga ja Saksan Bundesliga, tarjoavat jännittäviä otteluita ja mahdollisuuden seurata huippupelaajien suorituksia. Kansainväliset kilpailut, kuten UEFA Champions League ja FIFA World Cup, keräävät maailman parhaat joukkueet yhteen ja tarjoavat unohtumattomia hetkiä jalkapallon ystäville. Lisäksi on olemassa lukuisia cup-kilpailuja, joissa joukkueet kilpailevat toisiaan vastaan yksittäisissä otteluissa, mikä tuo lisää jännitystä kauteen.</p>
 
 <!-- ============================================================
      MAIN · tämän sivun oma sisältö, yksi per sivu
      ============================================================ -->
- <main>
-        <section>
-            <p>
-              Kehonrakennuskilpailuissa urheilijat esittelevät lihaksistoaan tuomareille, jotka arvioivat lihasmassaa, erottuvuutta, symmetriaa ja kehon mittasuhteita. 
-              Lajin tunnetuin kilpailu on Mr. Olympia, joka järjestettiin ensimmäisen kerran vuonna 1965.
-            </p>
-            <p>
-              Huipputasolla kilpaileminen vaatii vuosien tavoitteellista harjoittelua, tarkkaa ravitsemusta, riittävää palautumista, poseeraustaitoja ja poikkeuksellista genetiikkaa. 
-              Kilpailuun valmistautuminen voi kestää useita kuukausia.
-            </p>
-            <p>
-               Kehonrakennuksessa on sekä testattuja eli natural-kilpailuja että kilpailuja, joissa ei ole vastaavaa säännöllistä dopingtestausohjelmaa. 
-               Testatuissa kilpailuissa kielletyt suorituskykyä parantavat aineet ovat sääntöjen vastaisia. 
-               Ei testatuissa kilpailuissa on melkein pakollista käyttää suorityskykyä parantavia aineita jotta kilpailussa voi pärjätä. Suorityskykyä parantavat aineet tuovat merkittäviä terveysriskejä, ja niiden käyttö on kielletty monissa maissa.
-           </p>
-        </section>
 
-        <section>
-            <h2>Kehonrakennuksen legendat</h2>
-            <p>
-                Arnold Schwarzenegger: Seitsemänkertainen Mr. Olympia -voittaja ja yksi lajin tunnetuimmista uranuurtajista.
-             </p>
-            <p>   
-                Ronnie Coleman: Kahdeksankertainen Mr. Olympia -voittaja, joka tunnettiin valtavasta lihasmassastaan.
-                </p>
-            <p>
-                Lee Haney: Kahdeksankertainen Mr. Olympia -voittaja, joka menestyi vuosina 1984–1991.
-                </p>
-            <p>
-                Dorian Yates: Kuusinkertainen Mr. Olympia -voittaja, joka tunnettiin erityisen tiheästä lihaksistaan.
-                </p>
-            <p>
-                Jay Cutler: Nelinkertainen Mr. Olympia -voittaja, joka tunnettiin suuresta lihasmassastaan ja tasapainoisesta fysiikastaan.
-                </p>
-            <p>
-                Kike Elomaa: Voitti naisten Ms. Olympia -kilpailun vuonna 1981 ja nousi suomalaisen kehonrakennuksen kansainväliseksi nimeksi.
-                </p>
-            <p>
-                Jorma Räty: Suomalainen kehonrakennuksen uranuurtaja, joka voitti maailmanmestaruuden vuonna 1980.
-                </p>
-            <p>
-                Marko Savolainen: Tunnettu suomalainen kehonrakentaja, joka kilpaili kansainvälisellä ammattilaistasolla 1990-luvulla
-            </p>
-
-</section>
- </main>
 
 <!-- ============================================================
      FOOTER tulee sivun loppuun · sisältää yleensä yhteystiedot ja tekijänoikeuden, sama jokaisella sivulla
      github-linkin voit muokata oman profiilisi mukaan   
      ============================================================ -->
-<footer>
-    <div class="alatunniste-tiedot">
-    <p><small>&copy; 2026 Oletus Sivu · Y-tunnus 1234567-8 · <span class="paivitetty">Päivitetty <time datetime="2026-10-21">21.10.2026</time></span></small></p>
-    <p><small>Sivuston on tehnyt <a href="https://github.com/otpadev" target="_blank" rel="noopener noreferrer">Otto Palokangas</a> Sakkyn HTML-perusteet-kurssilla.</small></p>
-  </div>
+<footer class="sivun-footer">
+    <div class="footer-sisalto">
+        <!-- Ensimmäinen osio: Seuran tiedot -->
+        <div class="footer-kolumni">
+            <h3>FC Savo</h3>
+            <p>Perinteitä, tyylikkyyttä ja taistelutahtoa Kuopiosta. Virallinen verkkosivusto.</p>
+        </div>
+
+        <!-- Toinen osio: Pikalinkit -->
+        <div class="footer-kolumni">
+            <h4>Pikalinkit</h4>
+            <a href="index.html">Etusivu</a>
+            <a href="joukkueet.html">Joukkueet</a>
+            <a href="kilpailut.html">Kilpailut</a>
+        </div>
+
+        <!-- Kolmas osio: Yhteystiedot -->
+        <div class="footer-kolumni">
+            <h4>Yhteystiedot</h4>
+            <p>Stadio Giuseppe Meazza</p>
+            <p>Sähköposti: info@fcsavo.fi</p>
+        </div>
+    </div>
+
+    <!-- Alin rivi (tekijänoikeus) -->
+    <div class="footer-alaosa">
+        <p>&copy; 2026 FC Savo. Kaikki oikeudet pidätetään.</p>
+    </div>
 </footer>
 
 </body>

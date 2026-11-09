@@ -1,16 +1,147 @@
-body {color: rgb(255, 255, 255);
-    font-family: 'courier new', monospace;
-    background-color: rgb(0, 0, 0);}
-    nav ul li a {color:aliceblue;}
-    a:hover {color:rgb(252, 252, 252)}
-    a::after{color:rgb(88, 89, 87)}
+body {color: rgb(254, 254, 254);
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(1, 1, 1);}
+    nav ul li a {color:rgb(6, 152, 225);}
+    a:hover {color:rgb(240, 3, 3)}
+    a::after{color:rgb(114, 212, 16)}
 
-    img {border: 25px solid rgb(255, 255, 255);
-        border-style:groove;}
 
-        div {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-            flex-wrap: wrap;
-        }
+
+.ylapalkki {
+    background-color: #000000;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;           
+    justify-content: center;  
+}
+
+
+.logo-linkki img {
+    height: 200px;                  
+    width: auto;                  
+    display: block;  
+    margin-left: 20px;
+    margin-top: 10px;       
+}
+
+.nav-linkit {
+    display: flex;
+    gap: 150px;
+}
+
+.nav-linkit a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.nav-linkit a:hover {
+    background-color: #ff0000;
+}
+
+.galleria-container {
+    position: relative;
+    max-width: 1000px;  /* Säädä gallerian maksimileveyttä tarvittaessa */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 1px;
+}
+
+.galleria-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.5s ease-in-out; /* Pehmentää kuvan vaihtumista */
+}
+
+/* Nuolinappien muotoilu */
+.nappi {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Puoliläpinäkyvä musta tausta */
+    color: rgb(242, 236, 236);
+    border: none;
+    font-size: 20px;
+    padding: 12px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nappi:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.edellinen {
+    left: 10px;
+}
+
+.seuraava {
+    right: 10px;
+}
+
+/* Itse footerin tausta ja perusasetukset */
+.sivun-footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: sans-serif;
+    padding: 50px 20px 20px 20px;
+    margin-top: 60px; /* Jättää tyhjää tilaa sisällön ja footerin väliin */
+}
+
+/* Sisällön asettelu vierekkäin (Flexbox) */
+.footer-sisalto {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Siirtää tarvittaessa allekkain mobiilissa */
+    gap: 30px;
+}
+
+.footer-kolumni {
+    flex: 1;
+    min-width: 220px;
+}
+
+/* Otsikot (käytetään punaista tehosteväriä) */
+.footer-kolumni h3, 
+.footer-kolumni h4 {
+    color: #cc0000;
+    margin-bottom: 15px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+/* Tekstit ja linkit footerissa */
+.footer-kolumni p, 
+.footer-kolumni a {
+    color: #b0b0b0;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* Linkin väri kun hiiri viedään päälle */
+.footer-kolumni a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Alin copyright-rivi */
+.footer-alaosa {
+    max-width: 1000px;
+    margin: 30px auto 0 auto;
+    border-top: 1px solid #333333; /* Ohut siisti viiva */
+    padding-top: 20px;
+    text-align: center;
+    font-size: 13px;
+    color: #888888;
+}

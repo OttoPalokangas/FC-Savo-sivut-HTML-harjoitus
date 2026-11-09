@@ -4,73 +4,112 @@
     <!-- nämä kommentoidut tägit käydään läpi tulevalla oppitunnilla -->
 	<!-- <meta charset="utf-8"> -->
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-	<title>Kehonrakennus</title>
+	<title>FC SAVO</title>
     <link rel="stylesheet" href="css/tyyli.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <a href="index.html">ETUSIVU</a> <!-- Tämä on kommentti -->
-            <a href="kehitys.html">KEHITYS JA PALAUTUMINEN</a> <!-- Tämä on tietoa sivulle linkki-->
-            <a href="kilpailut.html">KEHONRAKENNUSKILPAILUT</a> <!-- Tämä on yhteystiedot sivulle linkki -->
-        </ul>
+ <nav class="ylapalkki">
+    <!-- Logo -->
+    <a href="index.html" class="logo-linkki">
+        <img src="img/fcsavo.png" alt="Logo">
+    </a>
+
+    <!-- Navigaation linkit -->
+    <div class="nav-linkit">
+         <a href="index.html">Etusivu</a>
+        <a href="joukkueet.html">Joukkueet</a>
+        <a href="kilpailut.html">Kilpailut</a>
+    </div>
 </nav>
-<header>
-    <!-- Logo on linkki etusivulle: a-elementin sisällä img. alt toimii linkkitekstinä. -->
-    <a href="index.html"><img src="img/sakky.jpg" alt="Logo" width="100" height="100"></a>
 
-    <h1>Mitä kehonrakennus on?</h1>
-    
-</header>
+<!-- Yläpalkki täällä -->
 
-<!-- ============================================================
-     MAIN · tämän sivun oma sisältö, yksi per sivu
-     ============================================================ -->
- <main>
-        <section>
-            <p>
-                Kehonrakennus eli bodybuilding on urheilulaji,
-                jossa tavoitteena on kehittää lihasmassaa,
-                lihasten muotoa ja kehon mittasuhteita.
-                Harjoittelu tapahtuu yleensä kuntosalilla,
-                ja kehityksessä ovat tärkeitä myös ravinto
-                ja riittävä palautuminen.
-            </p>
-            <p>
-                Lajia voi harrastaa oman hyvinvoinnin vuoksi
-                tai tavoitteellisesti kilpailumielessä.
-                Kehonrakennus vaatii pitkäjänteisyyttä,
-                itsekuria ja säännöllistä harjoittelua.
-            </p>
-        </section>
+    <!-- Galleria -->
+    <div class="galleria-container">
+        <button class="nappi edellinen" onclick="vaihdaKuva(-1)">&#10094;</button>
+        <img id="galleria-kuva" src="img/savo1.jpg" alt="Galleriakuva">
+        <button class="nappi seuraava" onclick="vaihdaKuva(1)">&#10095;</button>
+    </div>
 
-        <section>
-            <h2>Kehonrakennuksen historia</h2>
-            <p>
-                Kehonrakennuksen juuret ulottuvat 1800-luvun
-                loppupuolelle. Eugen Sandow oli yksi modernin
-                kehonrakennuksen uranuurtajista, ja vuonna
-                1901 hän järjesti Lontoossa merkittävän
-                kehonrakennuskilpailun.
-            </p>
-            <p>
-                Vuonna 1965 järjestettiin ensimmäinen
-                Mr. Olympia -kilpailu. Nykyään kehonrakennusta
-                harrastetaan ympäri maailmaa, ja lajissa
-                on useita erilaisia kilpailuluokkia.
-            </p>
-</section>
- </main>
+    <!-- TÄRKEÄÄ: JavaScript täytyy olla täällä, jotta nappi löytää sen! -->
+    <script>
+        const kuvat = [
+            "img/savo1.jpg",
+            "img/savo2.jpg",
+            "img/savo3.jpg"
+        ];
 
-<!-- ============================================================
-     FOOTER tulee sivun loppuun · sisältää yleensä yhteystiedot ja tekijänoikeuden, sama jokaisella sivulla
-     github-linkin voit muokata oman profiilisi mukaan   
-     ============================================================ -->
-<footer>
-    <div class="alatunniste-tiedot">
-    <p><small>&copy; 2026 Oletus Sivu · Y-tunnus 1234567-8 · <span class="paivitetty">Päivitetty <time datetime="2026-10-21">21.10.2026</time></span></small></p>
-    <p><small>Sivuston on tehnyt <a href="https://github.com/otpadev" target="_blank" rel="noopener noreferrer">Otto Palokangas</a> Sakkyn HTML-perusteet-kurssilla.</small></p>
-  </div>
+        let nykyinenIndeksi = 0;
+        const kuvaElementti = document.getElementById("galleria-kuva");
+        let ajastin;
+
+        function vaihdaKuva(suunta) {
+            nykyinenIndeksi += suunta;
+
+            if (nykyinenIndeksi >= kuvat.length) {
+                nykyinenIndeksi = 0;
+            } else if (nykyinenIndeksi < 0) {
+                nykyinenIndeksi = kuvat.length - 1;
+            }
+
+            kuvaElementti.src = kuvat[nykyinenIndeksi];
+            kaynnistaAutomaatti();
+        }
+
+        function kaynnistaAutomaatti() {
+            clearInterval(ajastin);
+            ajastin = setInterval(function() {
+                nykyinenIndeksi = (nykyinenIndeksi + 1) % kuvat.length;
+                kuvaElementti.src = kuvat[nykyinenIndeksi];
+            }, 4000);
+        }
+
+        kaynnistaAutomaatti();
+    </script>
+
+</body>
+<main class="sisalto">
+        <h1>FC Savon tarina: Perinteitä, tyylikkyyttä ja taistelutahtoa</h1>
+        
+        <h2>Perustaminen ja arvot</h2>
+        <p>FC Savo syntyi suuresta rakkaudesta jalkapalloa kohtaan – tavoitteenaan tuoda Savon sydämeen samanlaista legendaarista loistoa, pelityylin eleganssia ja horjumatonta periksiantamattomuutta, josta maailmankuulu AC Milan tunnetaan. Seura perustettiin kunnioittamaan klassista jalkapallokulttuuria: pelin on oltava paitsi tehokasta, myös kaunista katsottavaa.</p>
+        <p>Seuran tunnusvärit, <strong>musta ja punainen</strong> (<i>rossoneri</i>), symboloivat intohimoa ja voimaa. Musta edustaa rautaista puolustuksen kurinalaisuutta ja päättäväisyyttä, kun taas punainen sykkii hyökkäyspelin paloa, energiaa ja seuran herkeämätöntä taistelutahtoa kentällä.</p>
+
+        <h2>Pelityyli ja identiteetti</h2>
+        <p>Alusta alkaen FC Savo on halunnut erottua edukseen älykkäällä taktiikalla, tarkalla syöttöpelillä ja tyylikkäällä kenttäorganisaatiolla. Milanin kultaisten vuosien tyyliin joukkue ei tyydy vain roiskimaan palloa, vaan se rakentaa pelin hallitusti puolustuksen kautta aina vastustajan maalille saakka.</p>
+        <p>Yhteisöllisyys ja ylpeys omista juurista ovat seuran ydin. Fanit, pelaajat ja taustajoukot muodostavat tiiviin perheen, jossa jokainen ottelu on kunnianosoitus seuran arvoille.</p>
+
+        <h2>Tulevaisuus ja legenda</h2>
+        <p>Matka on vasta alussa, mutta FC Savon tavoitteet ovat korkealla. Jokainen harjoitus, jokainen ottelu ja jokainen maali kirjoittaa uutta lukua seuran historiaan. Tavoitteena ei ole pelkästään voittaa otteluita, sen on tarkoitus jättää pysyvä jälki savolaiseen urheiluhistoriaan – joukkueena, joka pelaa sydämellä ja tyylillä loppuun asti.</p>
+    </main>
+<footer class="sivun-footer">
+    <div class="footer-sisalto">
+        <!-- Ensimmäinen osio: Seuran tiedot -->
+        <div class="footer-kolumni">
+            <h3>FC Savo</h3>
+            <p>Perinteitä, tyylikkyyttä ja taistelutahtoa Kuopiosta. Virallinen verkkosivusto.</p>
+        </div>
+
+        <!-- Toinen osio: Pikalinkit -->
+        <div class="footer-kolumni">
+            <h4>Pikalinkit</h4>
+            <a href="index.html">Etusivu</a>
+            <a href="joukkueet.html">Joukkueet</a>
+            <a href="kilpailut.html">Kilpailut</a>
+        </div>
+
+        <!-- Kolmas osio: Yhteystiedot -->
+        <div class="footer-kolumni">
+            <h4>Yhteystiedot</h4>
+            <p>Stadio Giuseppe Meazza</p>
+            <p>Sähköposti: info@fcsavo.fi</p>
+        </div>
+    </div>
+
+    <!-- Alin rivi (tekijänoikeus) -->
+    <div class="footer-alaosa">
+        <p>&copy; 2026 FC Savo. Kaikki oikeudet pidätetään.</p>
+    </div>
 </footer>
 
 </body>
