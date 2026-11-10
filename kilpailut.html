@@ -2,71 +2,80 @@
 <html lang="fi">
 <head>
     <!-- nämä kommentoidut tägit käydään läpi tulevalla oppitunnilla -->
-	<!-- <meta charset="utf-8"> -->
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-	<title>FC SAVO</title>
+    <!-- <meta charset="utf-8"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <title>FC SAVO</title>
     <link rel="stylesheet" href="css/tyyli.css">
 </head>
 <body>
-   <nav class="ylapalkki">
-    <!-- Logo -->
-    <a href="index.html" class="logo-linkki">
-        <img src="img/fcsavo.png" alt="Logo">
-    </a>
 
-    <!-- Navigaation linkit -->
-    <div class="nav-linkit">
-        <a href="index.html">Etusivu</a>
-        <a href="joukkueet.html">Edustusjoukkue</a>
-        <a href="kilpailut.html">Kilpailut</a>
-    </div>
-</nav>
-<header>
-    <!-- Logo on linkki etusivulle: a-elementin sisällä img. alt toimii linkkitekstinä. -->
-    <h1>Kilpailut</h1>
-    
-</header>
+    <nav class="ylapalkki">
+        <!-- Logo -->
+        <a href="index.html" class="logo-linkki">
+            <img src="img/fcsavo.png" alt="Logo">
+        </a>
 
-<p>Jalkapallon kilpailut ovat monipuolisia ja kattavat niin kansalliset kuin kansainvälisetkin turnaukset. Kansalliset liigat, kuten Englannin Premier League, Espanjan La Liga ja Saksan Bundesliga, tarjoavat jännittäviä otteluita ja mahdollisuuden seurata huippupelaajien suorituksia. Kansainväliset kilpailut, kuten UEFA Champions League ja FIFA World Cup, keräävät maailman parhaat joukkueet yhteen ja tarjoavat unohtumattomia hetkiä jalkapallon ystäville. Lisäksi on olemassa lukuisia cup-kilpailuja, joissa joukkueet kilpailevat toisiaan vastaan yksittäisissä otteluissa, mikä tuo lisää jännitystä kauteen.</p>
-
-<!-- ============================================================
-     MAIN · tämän sivun oma sisältö, yksi per sivu
-     ============================================================ -->
-
-
-<!-- ============================================================
-     FOOTER tulee sivun loppuun · sisältää yleensä yhteystiedot ja tekijänoikeuden, sama jokaisella sivulla
-     github-linkin voit muokata oman profiilisi mukaan   
-     ============================================================ -->
-<footer class="sivun-footer">
-    <div class="footer-sisalto">
-        <!-- Ensimmäinen osio: Seuran tiedot -->
-        <div class="footer-kolumni">
-            <h3>FC Savo</h3>
-            <p>Perinteitä, tyylikkyyttä ja taistelutahtoa Kuopiosta. Virallinen verkkosivusto.</p>
-        </div>
-
-        <!-- Toinen osio: Pikalinkit -->
-        <div class="footer-kolumni">
-            <h4>Pikalinkit</h4>
+        <!-- Navigaation linkit -->
+        <div class="nav-linkit">
             <a href="index.html">Etusivu</a>
-            <a href="joukkueet.html">Joukkueet</a>
-            <a href="kilpailut.html">Kilpailut</a>
+            <a href="joukkueet.html">Edustusjoukkue</a>
+            <a href="kilpailut.html">Ota yhteyttä</a>
+        </div>
+    </nav>
+    
+    <main class="yhteys-keskus">
+        <h1 style="color: white;">Ota yhteyttä</h1>
+        
+        <form action="laheta.php" method="POST" class="lomake-ruudukko">
+            <div class="kentta-ryhma">
+                <label for="nimi" class="pakollinen" style="color: white;">Nimi</label>
+                <input type="text" id="nimi" name="nimi" required>
+            </div>
+
+            <div class="kentta-ryhma">
+                <label for="sahkoposti" class="pakollinen" style="color: white;">Sähköposti</label>
+                <input type="email" id="sahkoposti" name="sahkoposti" required>
+            </div>
+
+            <div class="kentta-ryhma">
+                <label for="viesti" class="pakollinen" style="color: white;">Viesti</label>
+                <textarea id="viesti" name="viesti" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="painike">Lähetä viesti</button>
+        </form>
+    </main>
+
+    <!-- Footer siirretty oikeasti body-elementin sisälle ennen sen sulkemista -->
+    <footer class="sivun-footer">
+        <div class="footer-sisalto">
+            <!-- Ensimmäinen osio: Seuran tiedot -->
+            <div class="footer-kolumni">
+                <h3>FC Savo</h3>
+                <p>Perinteitä, tyylikkyyttä ja taistelutahtoa Kuopiosta. Virallinen verkkosivusto.</p>
+            </div>
+
+            <!-- Toinen osio: Pikalinkit -->
+            <div class="footer-kolumni">
+                <h4>Pikalinkit</h4>
+                <a href="index.html">Etusivu</a>
+                <a href="joukkueet.html">Joukkueet</a>
+                <a href="kilpailut.html">Ota yhteyttä</a>
+            </div>
+
+            <!-- Kolmas osio: Yhteystiedot -->
+            <div class="footer-kolumni">
+                <h4>Yhteystiedot</h4>
+                <p>Stadio Giuseppe Meazza</p>
+                <p>Sähköposti: info@fcsavo.fi</p>
+            </div>
         </div>
 
-        <!-- Kolmas osio: Yhteystiedot -->
-        <div class="footer-kolumni">
-            <h4>Yhteystiedot</h4>
-            <p>Stadio Giuseppe Meazza</p>
-            <p>Sähköposti: info@fcsavo.fi</p>
+        <!-- Alin rivi (tekijänoikeus) -->
+        <div class="footer-alaosa">
+            <p>&copy; 2026 FC Savo. Kaikki oikeudet pidätetään.</p>
         </div>
-    </div>
-
-    <!-- Alin rivi (tekijänoikeus) -->
-    <div class="footer-alaosa">
-        <p>&copy; 2026 FC Savo. Kaikki oikeudet pidätetään.</p>
-    </div>
-</footer>
+    </footer>
 
 </body>
 </html>

@@ -9,7 +9,7 @@ body {color: rgb(254, 254, 254);
 
 .ylapalkki {
     background-color: #000000;
-    padding: 10px 10px;
+    padding: 100px 10px;
     display: flex;
     align-items: center;           
     justify-content: center;  
@@ -17,10 +17,10 @@ body {color: rgb(254, 254, 254);
 
 
 .logo-linkki img {
-    height: 200px;                  
+    height: 100px;                  
     width: auto;                  
     display: block;  
-    margin-left: 20px;
+    margin-left: 1px;
     margin-top: 10px;       
 }
 
@@ -188,3 +188,60 @@ body {color: rgb(254, 254, 254);
             color: #ffffff;
             margin: 0;
         }
+
+
+
+/* Pääsisältö venyttää itsensä, jolloin footer työntyy alas */
+.yhteys-keskus {
+    flex: 1;
+    max-width: 600px;
+    margin: 120px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Yksittäisen kentän ryhmittely */
+.kentta-ryhma {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem; /* Jättää väliä kenttien väliin */
+}
+
+/* Kenttien tyylit: width 100% ottaa kaiken tilan lomakkeen sisältä */
+.lomake-ruudukko input,
+.lomake-ruudukko select,
+.lomake-ruudukko textarea {
+    width: 100%;        /* Korjattu 20% -> 100% */
+    padding: 12px;
+    border: 1px solid #444; /* Tummemmalle teemalle sopiva reunus */
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    background-color: #1a1a1a; /* Tumma tausta kentille */
+    color: #fff;               /* Valkoinen teksti kentissä */
+}
+
+/* Pakollinen kenttä: tähti CSS-muotoiluna */
+label.pakollinen::after { 
+    content: " *"; 
+    color: #B00020; 
+}
+
+/* Lähetä-painike */
+.painike {
+    background-color: #1B7F3B;
+    color: white; /* Korjattu mustasta valkoiseksi, että näkyy tummalla taustalla */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top:10px;
+}
+
+.painike:hover {
+    background-color: #145e2d;
+}
