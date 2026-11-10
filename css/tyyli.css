@@ -45,7 +45,7 @@ body {color: rgb(254, 254, 254);
 
 .galleria-container {
     position: relative;
-    max-width: 1000px;  /* Säädä gallerian maksimileveyttä tarvittaessa */
+    max-width: 1000px; 
     margin: auto;
     overflow: hidden;
     border-radius: 1px;
@@ -55,7 +55,7 @@ body {color: rgb(254, 254, 254);
     width: 100%;
     height: auto;
     display: block;
-    transition: opacity 0.5s ease-in-out; /* Pehmentää kuvan vaihtumista */
+    transition: opacity 0.5s ease-in-out;
 }
 
 /* Nuolinappien muotoilu */
@@ -63,7 +63,7 @@ body {color: rgb(254, 254, 254);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5); /* Puoliläpinäkyvä musta tausta */
+    background-color: rgba(0, 0, 0, 0.5); 
     color: rgb(242, 236, 236);
     border: none;
     font-size: 20px;
@@ -85,22 +85,22 @@ body {color: rgb(254, 254, 254);
     right: 10px;
 }
 
-/* Itse footerin tausta ja perusasetukset */
+
 .sivun-footer {
     background-color: #1a1a1a;
     color: #ffffff;
     font-family: sans-serif;
     padding: 50px 20px 20px 20px;
-    margin-top: 60px; /* Jättää tyhjää tilaa sisällön ja footerin väliin */
+    margin-top: 60px;
 }
 
-/* Sisällön asettelu vierekkäin (Flexbox) */
+
 .footer-sisalto {
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; /* Siirtää tarvittaessa allekkain mobiilissa */
+    flex-wrap: wrap; 
     gap: 30px;
 }
 
@@ -109,7 +109,7 @@ body {color: rgb(254, 254, 254);
     min-width: 220px;
 }
 
-/* Otsikot (käytetään punaista tehosteväriä) */
+
 .footer-kolumni h3, 
 .footer-kolumni h4 {
     color: #cc0000;
@@ -118,7 +118,7 @@ body {color: rgb(254, 254, 254);
     letter-spacing: 0.5px;
 }
 
-/* Tekstit ja linkit footerissa */
+
 .footer-kolumni p, 
 .footer-kolumni a {
     color: #b0b0b0;
@@ -129,17 +129,17 @@ body {color: rgb(254, 254, 254);
     line-height: 1.5;
 }
 
-/* Linkin väri kun hiiri viedään päälle */
+
 .footer-kolumni a:hover {
     color: #ffffff;
     text-decoration: underline;
 }
 
-/* Alin copyright-rivi */
+
 .footer-alaosa {
     max-width: 1000px;
     margin: 30px auto 0 auto;
-    border-top: 1px solid #333333; /* Ohut siisti viiva */
+    border-top: 1px solid #333333; 
     padding-top: 20px;
     text-align: center;
     font-size: 13px;
@@ -151,14 +151,14 @@ body {color: rgb(254, 254, 254);
             padding-bottom: 5px;
             margin-top: 30px;
         }
-        /* Pelaajien ruudukko / flex-säiliö */
+    
         .pelaaja-lista-flex {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
             margin-top: 15px;
         }
-        /* Yksittäinen pelaajakortti */
+       
         .pelaaja-kortti {
             background-color: #010101;
             border: 1px solid #040404;
@@ -191,7 +191,7 @@ body {color: rgb(254, 254, 254);
 
 
 
-/* Pääsisältö venyttää itsensä, jolloin footer työntyy alas */
+
 .yhteys-keskus {
     flex: 1;
     max-width: 600px;
@@ -201,29 +201,28 @@ body {color: rgb(254, 254, 254);
     width: 100%;
 }
 
-/* Yksittäisen kentän ryhmittely */
+
 .kentta-ryhma {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin-bottom: 1rem; /* Jättää väliä kenttien väliin */
+    margin-bottom: 1rem; 
 }
 
-/* Kenttien tyylit: width 100% ottaa kaiken tilan lomakkeen sisältä */
+
 .lomake-ruudukko input,
 .lomake-ruudukko select,
 .lomake-ruudukko textarea {
-    width: 100%;        /* Korjattu 20% -> 100% */
+    width: 100%;        
     padding: 12px;
-    border: 1px solid #444; /* Tummemmalle teemalle sopiva reunus */
+    border: 1px solid #444; 
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 1rem;
-    background-color: #1a1a1a; /* Tumma tausta kentille */
-    color: #fff;               /* Valkoinen teksti kentissä */
+    background-color: #1a1a1a; 
+    color: #fff;              
 }
 
-/* Pakollinen kenttä: tähti CSS-muotoiluna */
 label.pakollinen::after { 
     content: " *"; 
     color: #B00020; 
@@ -232,7 +231,7 @@ label.pakollinen::after {
 /* Lähetä-painike */
 .painike {
     background-color: #1B7F3B;
-    color: white; /* Korjattu mustasta valkoiseksi, että näkyy tummalla taustalla */
+    color: white; 
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
