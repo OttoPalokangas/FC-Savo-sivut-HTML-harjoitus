@@ -58,7 +58,6 @@ body {color: rgb(254, 254, 254);
     transition: opacity 0.5s ease-in-out;
 }
 
-/* Nuolinappien muotoilu */
 .nappi {
     position: absolute;
     top: 50%;
@@ -228,7 +227,6 @@ label.pakollinen::after {
     color: #B00020; 
 }
 
-/* Lähetä-painike */
 .painike {
     background-color: #1B7F3B;
     color: white; 
